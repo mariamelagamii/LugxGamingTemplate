@@ -144,6 +144,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 .nav-items {
     display: flex;
@@ -189,6 +190,9 @@ img {
 }
 
 @media (max-width: 767px) {
+    .header .container {
+        padding: 0 29px;
+    }
     .header nav i {
         color: white;
         font-size: 28px;
@@ -211,10 +215,11 @@ img {
     .header .container nav .toggle-menu:hover + ul {
         display: flex;
         flex-direction: column;
-        top: 65px;
-        right: 10px;
-        width: calc(100% - 20px);
+        top: 66px;
+        right: 15px;
+        width: calc(100% - 30px);
         background-color: white;
+        position: absolute;
         padding: 0;
         z-index: 10;
         border-radius: 0 0 30px 30px;
@@ -326,7 +331,7 @@ img {
 
 .main-banner .banner-img span.offer {
     position: absolute;
-    left: -26px;
+    left: -5px;
     bottom: 0px;
     border-radius: 50%;
     background-color: var(--red);
@@ -404,6 +409,26 @@ img {
         display: none
     }
 }
+@media (max-width: 575px) {
+    .main-banner form {
+        position: relative;
+        flex-direction: column;
+        padding: 0px 10%;
+    }
+    .main-banner form button {
+        position: relative;
+        margin: 8px 0;
+    }
+    .main-banner .banner-info h2 {
+        padding-right: 0;
+    }
+    .main-banner .banner-info h2 {
+        font-size: 41px;
+        margin-right: 0;
+        padding-right: 0;
+    }
+}
+
 .features {
     margin-top: -115px;
 }
@@ -687,6 +712,7 @@ img {
     border-radius: 25px;
     padding: 80px;
     margin-right: 100px;
+
 }
 .cta .shop .section-heading {
     margin-right: 30px;
@@ -756,6 +782,43 @@ img {
         margin-bottom: 35px;
     }
 }
+@media (max-width: 575px) {
+    .cta .shop, .cta .subscribe {
+        text-align: center;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .cta .shop .section-heading {
+    margin-right: 0;
+    margin-bottom: 0;
+    }
+    .cta .section-heading h2 {
+        font-size: 20px !important;
+        line-height: 30px;
+        padding: 0px 36px;
+    }
+    .cta .section-heading h6 {
+        padding: 22px 0 0 !important;
+    }
+    .cta #subscribe {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 10%;
+    }
+    .cta .shop p {
+        font-size: 13px;
+    }
+    .cta .subscribe form button {
+        position: relative;
+        margin: 8px 0;
+    }
+    .cta .shop .main-button {
+        margin-top: 0;
+        margin: 5px 0;
+    }
+}
 footer {
     margin-top: 150px;
     background-color: var(--blue);
@@ -780,4 +843,12 @@ footer p a {
 }
 footer p a:hover {
     opacity: 0.75;
+}
+@media (max-width: 575px) {
+    footer p {
+        line-height: 26px;
+        font-size: 14px;
+        margin-top: -100px;
+        padding-top: 27px;
+    }
 }
